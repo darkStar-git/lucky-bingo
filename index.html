@@ -5,33 +5,34 @@
     <meta charset="UTF-8">
     <title>Lucky Bingo</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fullscreen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <main>
+        <h2 id="resultado">Aguardando sorteio...</h2>
 
-    <h2 id="resultado">Aguardando sorteio...</h2>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th class="cor1">B</th>
+                    <th class="cor2">I</th>
+                    <th class="cor3">N</th>
+                    <th class="cor4">G</th>
+                    <th class="cor5">O</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
 
 
-    <table id="tabela">
-        <thead>
-            <tr>
-                <th class="cor1">B</th>
-                <th class="cor2">I</th>
-                <th class="cor3">N</th>
-                <th class="cor4">G</th>
-                <th class="cor5">O</th>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-
-    <br><br>
-    
     <footer class="controles">
         <div class="botoes">
 
@@ -43,7 +44,11 @@
                 <button class="reiniciar" onclick="reiniciarJogo()">
                     <i class="fas fa-redo"></i> Reiniciar
                 </button>
-                
+
+                <button class="reiniciar" onclick="modoProjecao()">
+                    <i class="fas fa-expand"></i> Projeção
+                </button>
+
                 <div class="lista-modo">
                     <select class="modo" id="modo">
                         <option value="50">50 Números</option>
@@ -57,9 +62,22 @@
 
     </footer>
 
+    <div id="telaCheia" class="tela-cheia">
+        
+        <div id="restantes"></div>
+
+        <div id="numeroGigante">--</div>
+
+        <div id="historicoGigante"></div>
+
+        <div class="atalhos">
+            S = Sortear • R = Reiniciar • ESC = Sair
+        </div>
+
+    </div>
+
     <script src="./js/script.js" type="module"></script>
 
 </body>
-
 
 </html>

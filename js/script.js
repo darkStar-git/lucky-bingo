@@ -22,3 +22,41 @@ window.reiniciarJogo = () => {
 
 // Inicializa tabela na primeira carga
 iniciar(tabela, modo, numeros, sorteados);
+
+// Funções para projeção em tela cheia
+const telaCheia = document.getElementById("telaCheia");
+const numeroGigante = document.getElementById("numeroGigante");
+
+window.modoProjecao = () => {
+
+    telaCheia.classList.add("ativa");
+
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    }
+};
+
+window.sairProjecao = () => {
+    telaCheia.classList.remove("ativa");
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+};
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.code === "KeyS") {
+        e.preventDefault();
+        sortearNumero();
+    }
+
+    if (e.code === "KeyR") {
+        reiniciarJogo();
+    }
+
+    if (e.code === "Escape") {
+        sairProjecao();
+    }
+
+});

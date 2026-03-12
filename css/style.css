@@ -1,6 +1,15 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
 }
 
 table {
@@ -60,9 +69,25 @@ tr th {
     100% { transform: scale(1); }
 }
 
+.b {
+    background-color: #487cec;
+}
+.i {
+    background-color: #1ebb89;
+}
+.n {
+    background-color: #f1c35d;
+}
+.g {
+    background-color: #ff4e4e;
+}
+.o {
+    background-color: #9c4ae4;
+}
+
 .sorteado {
-    background-color: purple;
     color: white;
+    font-weight: 500;
     animation: scaleUp 0.3s ease;
 }
 
@@ -73,7 +98,7 @@ tr th {
 
 .controles {
     width: 100%;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     background-color: #f3f3f3;

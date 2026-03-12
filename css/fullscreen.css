@@ -1,0 +1,71 @@
+.tela-cheia {
+    position: fixed;
+    inset: 0;
+    background: #0c0c0c;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+#restantes {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 3vw;
+    opacity: 0.8;
+}
+
+.tela-cheia.ativa {
+    display: flex;
+}
+
+#numeroGigante {
+    font-size: 20vw;
+    font-weight: bold;
+}
+
+#historicoGigante {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+
+    display: flex;
+    gap: 20px;
+
+    font-size: 4vw;
+    opacity: 0.8;
+}
+
+.historico-item {
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 10px;
+}
+
+.flash {
+    animation: flashAnim 0.6s ease;
+}
+
+.atalhos {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+@keyframes flashAnim {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: var(--flash-color);
+    }
+    100% {
+        background-color: white;
+    }
+}
